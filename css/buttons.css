@@ -1,0 +1,200 @@
+.sharebutton {
+    display: inline-block;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff ! important;
+    font-size: 1.0em;
+    font-weight: normal;
+    line-height: 2em;
+    border: solid 0.2em #fff;
+    border-radius: 1.4em;
+    -moz-border-radius: 1.4em;
+    -webkit-border-radius: 1.4em;
+}
+
+.facebookbutton{
+    background: #4060A5 ! important;
+}
+
+.facebookbutton:before{
+    font-family: "FontAwesome";
+    content: "\f09a";
+}
+
+.facebookbutton:hover{
+    color: #4060A5  ! important;
+    border-color: #4060A5 ! important;
+    background: #fff ! important;
+}
+
+.twitterbutton{
+    background: #00ABE3 ! important;
+}
+
+.twitterbutton:before {
+      font-family: "FontAwesome";
+      content: "\f099";
+}
+
+.twitterbutton:hover {
+      color: #00ABE3  ! important;
+      background: #fff ! important;
+      border-color: #00ABE3 ! important;
+}
+
+.googleplusbutton {
+    background: #e64522 ! important;
+}
+
+.googleplusbutton:before {
+      font-family: "FontAwesome";
+      content: "\f0d5";
+}
+
+.googleplusbutton:hover{
+      color: #e64522 ! important;
+      border-color: #e64522 ! important;
+      background: #fff ! important;
+}
+
+.linkedinbutton{
+    background: #0094BC ! important;
+}
+
+.linkedinbutton:before{
+      font-family: "FontAwesome";
+      content: "\f0e1";
+}
+
+.linkedinbutton:hover{
+      color: #0094BC  ! important;
+      border-color: #0094BC ! important;
+      background: #fff ! important;
+}
+
+.redditbutton {
+    background: #5f99cf ! important;
+}
+
+.redditbutton:before{
+    font-family: "FontAwesome";
+    content: "\f1a1";
+}
+
+.redditbutton:hover{
+    color: #5f99cf ! important;
+    border-color: #5f99cf ! important;
+    background: #fff ! important;
+}
+
+.spotifybutton {
+    background: #81b71a ! important;
+}
+
+.spotifybutton:before{
+    font-family: "FontAwesome";
+    content: "\f1bc";
+}
+
+.spotifybutton:hover{
+    color: #81b71a ! important;
+    border-color: #81b71a ! important;
+    background: #fff ! important;
+}
+
+.githubbutton {
+    background: #4183c4 ! important;
+}
+
+.githubbutton:before{
+    font-family: "FontAwesome";
+    content: "\f09b";
+}
+
+.githubbutton:hover{
+    color: #4183c4 ! important;
+    border-color: #4183c4 ! important;
+    background: #fff ! important;
+}
+
+.flickrbutton {
+    background: #000 ! important;
+}
+
+.flickrbutton:before{
+    font-family: "FontAwesome";
+    content: "\f16e";
+}
+
+.flickrbutton:hover{
+    color: #000 ! important;
+    border-color: #000 ! important;
+    background: #fff ! important;
+}
+
+
+
+.skypebutton {
+    background: #00aff0 ! important;
+}
+
+.skypebutton:before{
+    font-family: "FontAwesome";
+    content: "\f17e";
+}
+
+.skypebutton:hover{
+    color: #00aff0 ! important;
+    border-color: #00aff0 ! important;
+    background: #fff ! important;
+}
+
+.youtubebutton {
+    background: #e52d27 ! important;
+}
+
+.youtubebutton:before{
+    font-family: "FontAwesome";
+    content: "\f167";
+}
+
+.youtubebutton:hover {
+    color: #e52d27 ! important;
+    border-color: #e52d27 ! important;
+    background: #fff ! important;
+}
+
+.linkbutton {
+    background: orange ! important;
+}
+
+.linkbutton:before{
+    font-family: "FontAwesome";
+    content: "\f0c1";
+}
+
+.linkbutton:hover {
+    color: orange ! important;
+    border-color: orange ! important;
+    background: #fff ! important;
+}
+
+.mailbutton {
+    background: orange ! important;
+}
+
+.mailbutton:before{
+    font-family: "FontAwesome";
+    content: "\f003";
+}
+
+.mailbutton:hover {
+    color: orange ! important;
+    border-color: orange ! important;
+    background: #fff ! important;
+}
+

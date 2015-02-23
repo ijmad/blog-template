@@ -1,0 +1,654 @@
+@font-face {
+    font-family: empty;
+    src: url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAQ0AAoAAAAAA+wAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAJ4AAACeXQ48j09TLzIAAAGUAAAAYAAAAGAIIgbWY21hcAAAAfQAAABEAAAARAAyAGlnYXNwAAACOAAAAAgAAAAIAAAAEGhlYWQAAAJAAAAANgAAADb9mzB5aGhlYQAAAngAAAAkAAAAJAHiAeVobXR4AAACnAAAABAAAAAQAAAAAG1heHAAAAKsAAAABgAAAAYABFAAbmFtZQAAArQAAAFdAAABXVqZXRlwb3N0AAAEFAAAACAAAAAgAAMAAAEABAQAAQEBDHNwYWNlLWVtcHR5AAECAAEAOvgcAvgbA/gYBB4KABlT/4uLHgoAGVP/i4sMB4tr+JT4dAUdAAAAfA8dAAAAgREdAAAACR0AAACVEgAFAQEMFxkbHnNwYWNlLWVtcHR5c3BhY2UtZW1wdHl1MHUxdTIwAAACAYkAAgAEAQEEBwoN/JQO/JQO/JQO/JQO+JQU+JQViwwKAAAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAABAAAAAIAHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADAAAAAIAAgAAgAAAAEAIP/9//8AAAAAACD//f//AAH/4wADAAEAAAAAAAAAAAABAAH//wAPAAEAAAABAAAAeR2GXw889QALAgAAAAAAzz54vgAAAADPPni+AAAAAAAAAAAAAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABQAAAEAAAAAAAOAK4AAQAAAAAAAQAWAAAAAQAAAAAAAgAOAGMAAQAAAAAAAwAWACwAAQAAAAAABAAWAHEAAQAAAAAABQAWABYAAQAAAAAABgALAEIAAQAAAAAACgAoAIcAAwABBAkAAQAWAAAAAwABBAkAAgAOAGMAAwABBAkAAwAWACwAAwABBAkABAAWAHEAAwABBAkABQAWABYAAwABBAkABgAWAE0AAwABBAkACgAoAIcAcwBwAGEAYwBlAC0AZQBtAHAAdAB5AFYAZQByAHMAaQBvAG4AIAAxAC4AMABzAHAAYQBjAGUALQBlAG0AcAB0AHlzcGFjZS1lbXB0eQBzAHAAYQBjAGUALQBlAG0AcAB0AHkAUgBlAGcAdQBsAGEAcgBzAHAAYQBjAGUALQBlAG0AcAB0AHkARwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('woff');
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    min-width: 18.5em;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 10.5em;
+}
+
+body.noscript {
+    margin-top: 0;
+}
+
+ul, ol, li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 0.25em 0 1.0em 0;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+div, header, section, nav, p, h1 {
+    margin:0;
+    padding:0;
+    border: 0; 
+}
+
+header {
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-top: solid 0.5em transparent;
+    border-bottom: solid 0.5em transparent; 
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    font-family: empty;
+    z-index: 100;
+}
+
+body.noscript header {
+    position: relative;
+    height: 24.5em;
+}
+
+header {
+    height: 9.5em;
+    overflow: visible;
+}
+
+header > section#welcome {
+    width: 100%;
+    height: 1.5em;
+    margin: 0;
+    padding: 0.25em 0 0 0;
+    overflow: hidden;
+
+    font-size: 3em;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px #333;
+    background: transparent;
+}
+
+header > section.panel {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 1em;
+}
+
+header > section.panel > .content {
+    display: block;
+    overflow: hidden;
+    height: 2.0em;
+}
+
+header > section.panel.focus > .content, body.noscript header > section.panel > .content {
+    height: 17em;
+}
+
+@media screen {
+    header section#welcome > .coffee {
+        text-indent : -1000em;
+        display: inline-block;
+        height: 0.76em;
+        width: 1em;
+        vertical-align: middle; 
+        background-image: url(../images/coffee.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+header > section.panel {
+    height: 2em;
+    width: 15em;
+}
+
+header.collapsed > section.panel {
+    cursor: pointer;
+}
+
+header > section.panel.focus, body.noscript header > section.panel {
+    width: 15em !important;
+    height: 17em !important;
+    padding: 0.25em;
+    border: solid 0.25em rgba(250, 210, 155, 1.0);
+}
+
+body.noscript header > section.panel {
+    border-color: rgba(111, 78, 55, 0.95);
+}
+
+header > section.panel.focus > .content, body.noscript header > section.panel > .content {
+    display: block;
+    width: 15em;
+}
+
+header > section h1, header > section input {
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 0.25em 0.5em 0.5em 0.5em;
+    height: 1.5em;
+    text-align: center;
+}
+
+header > section input {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: left;
+}
+
+header > section h2 {
+    font-size: 1em;
+    margin: 0;
+    padding: 0.5em 0.25em 0.25em 0.25em;
+    text-transform: uppercase;
+}
+
+header > section#search input#terms {
+    color: #fff;
+    width: 11.2em; 
+}
+
+header > section#search input#terms.untouched {
+    color: #aaa;
+}
+
+header > section#search input#submit {
+    position: absolute; 
+    top: 0.25em; 
+    right: 0; 
+    color: rgb(250, 210, 155); 
+    cursor: pointer;
+}
+
+header > section#search {
+    text-align: left;
+}
+
+header > section#search .content ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+header > section#search .content ul li {
+    display: list-item;
+    overflow: hidden;
+    width: 12em;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 0.5em;
+    font-size: 1.2em;
+}
+
+
+header > section p {
+    width: auto;
+    margin: 0.5em;
+}
+
+header > section.panel > .collapse {
+    display: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.8em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #999;
+}
+
+header > section.panel.focus > .collapse, body.noscript header > section.panel > .collapse {
+    display: block;
+}
+
+header > section.panel > .collapse:before, header > section.panel > .collapse:after {
+    content: '\f0d8';
+    padding: 0 1em;
+    font-family: FontAwesome;
+    font-size: 1.2em;
+}
+
+header > section.focus h1, body.noscript header > section h1 {
+    border-bottom: solid 1px white;
+}
+
+
+@media screen {
+    header > section > a {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    
+    header > section > .content h1 {
+        position: relative;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+    header > section > .content h1:before {
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        font-family: FontAwesome;
+    }
+
+    header > section#date > .content h1:before {
+        content: "\f073\0020\0020";
+    }
+
+    header > section#search > .content h1:before {
+        content: "\f002\0020\0020";
+    }
+
+    header > section#popular > .content h1:before {
+        content: "\f005\0020\0020";
+    }
+
+    header > section#info >  .content h1:before {
+        content: "\f183\0020\0020";
+    }
+}
+
+@media screen and (min-width: 71em) and (min-height: 30em) {
+    body {
+        margin-top: 27.0em;
+    }
+    
+    body.noscript {
+        margin-top: 0;
+    }
+    
+    body.noscript header, body.noscript header.expanded {
+        height: 26.5em;
+    }
+        
+    header.expanded {
+        height: 26em;
+    }
+    
+    header.expanded > section#welcome {
+        font-size: 4em;
+    }
+    
+    header.expanded > section.panel {
+        height: 17em;
+        width: 15em;
+    }
+    
+    header.expanded > section.panel.focus {
+        padding: 0.5em;
+        border: none;
+    }
+    
+    header.expanded > section.panel .content {
+        display: block;
+        height: 17em;
+    }
+    
+    header.expanded > section.panel .collapse {
+        display: none;
+    }
+    
+    header.expanded > section h1 {
+        border-bottom: solid 1px white;
+    }
+}
+
+
+
+@media screen and (min-width: 75em) and (min-height: 40em) { 
+    body {
+        margin-top: 31.25em;
+    }
+    
+    body.noscript {
+        margin-top: 0;
+    }
+    
+    header.expanded , body.noscript header, body.noscript header.expanded {
+        height: 30.0em;
+    }
+    
+    header.expanded > section#welcome {
+        font-size: 6em;
+    }
+}
+
+
+@media screen and (max-width: 70em) {
+    body {
+        margin-top: 9.75em;
+    }
+    
+    body.noscript {
+        margin-top: 0;
+    }
+    
+    header {
+        height: 8.75em;
+    }
+    
+    body.noscript header {
+        height: 43.25em;
+    }
+    
+    header > section#welcome {
+        font-size: 2.75em;
+    }
+    
+    header > section.panel {
+        width: 2.5em !important;
+    }
+    
+    header > section.panel:before {
+        display: block;
+        font-family: FontAwesome;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        height: 1.5em;
+        text-align: center;
+    }
+    
+    header > section.panel#date:before {
+        content: "\f073";
+    }
+    
+    header > section.panel#search:before {
+        content: "\f002";
+    }
+    
+    header > section.panel#popular:before {
+        content: "\f005";
+    }
+    
+    header > section.panel#info:before {
+        content: "\f183";
+    }
+    
+    header > section.panel.focus:before, body.noscript header > section.panel:before {
+        display: none ! important;
+    }
+    
+    header > section.panel {
+        position: relative;
+    }
+    
+    header > section.panel .content {
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 68em) {
+    body.noscript header {
+        height: 24.75em;
+    }
+}
+
+
+@media screen and (max-width: 34em) {
+    body {
+        margin-top: 8.75em;
+    }
+    
+    body.noscript {
+        margin-top: 0;
+    }
+    
+    header {
+        height: 7.75em;
+    }
+    
+    body.noscript header {
+        height: 81.25em;
+    }
+    
+    header > section#welcome {
+        font-size: 2.25em;
+    }
+    
+    header > section.panel.focus, body.noscript header > section.panel {
+        width: 2.5em !important;
+        height: 2.0em !important;
+        margin: 0.5em;
+        padding: 0.25em;
+        border: solid 0.25em rgba(250, 210, 155, 1.0);
+    }
+    
+    body.noscript header > section.panel {
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 0 ! important;
+        height: 0 ! important;
+    }
+    
+    header > section.panel.focus:before {
+        display: block ! important;
+    }
+    
+    body.noscript header > section.panel:before {
+        display: none ! important;
+    }
+    
+    header > section.panel.focus .content, body.noscript header > section.panel .content {
+        border-radius: 1em;
+        position: absolute;
+        top: 3.0em;
+        height: 17em;
+        width: 15em;
+        padding: 0.5em 1em;
+        border: solid 0.25em rgba(250, 210, 155, 1.0);
+    }
+    
+    body.noscript header > section.panel.focus, body.noscript header > section.panel .content {
+        border-color: rgba(111, 78, 55, 0.95);
+    }
+
+    header > section.panel.focus#date .content {
+        left: -0.25em;
+    }
+    
+    header > section.panel.focus#search .content {
+        left: -4.75em;
+    }
+    
+    header > section.panel.focus#popular .content {
+        left: -9.25em;
+    }
+    
+    header > section.panel.focus#info .content {
+        left: -13.75em;
+    }
+    
+    body.noscript header > section.panel#date .content {
+        left: -8.75em;
+        top: 0.75em;
+    }
+    
+    body.noscript header > section.panel#search .content {
+        left: -8.75em;
+        top: 19.75em;
+    }
+    
+    body.noscript header > section.panel#popular .content {
+        left: -8.75em;
+        top: 38.75em;
+    }
+    
+    body.noscript header > section.panel#info .content {
+        left: -8.75em;
+        top: 57.75em;
+    }
+    
+    header > section.panel {
+        width: 2.5em !important;
+    }
+
+    header > section.panel {
+        position: relative;
+    }
+
+    header > section.panel .content {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 27em) {
+    body {
+        margin-top: 7.35em;
+    }
+    
+    body.noscript {
+        margin-top: 0;
+    }
+    
+    header {
+        height: 6.5em;
+    }
+    
+    body.noscript header {
+        height: 80em;
+    }
+    
+    header > section#welcome {
+        font-size: 1.6em;
+    }
+}
+
+
+
+.yearpicker {
+    display: table;
+    width: 100%;
+    margin: 1.0em 0;
+}
+
+.yearpicker .month {
+    display: table-cell;
+    width: 80%;
+}
+
+.yearpicker .next, .yearpicker .prev {
+    display: table-cell;
+    width: 10%;
+    vertical-align: middle;
+    font-size: 1.5em;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+
+
+@media screen {
+    .yearpicker .year {
+        position: absolute;
+        top: 0;
+        left: -1000em;
+    }
+    
+    .yearpicker .prev:before {
+        font-family: FontAwesome;
+        content: '\f191';
+    }
+
+    .yearpicker .next:after {
+        font-family: FontAwesome;
+        content: '\f152';
+    }
+}
+
+.monthpicker {
+    display: table;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.monthpicker ol.quarter {
+    display: table-row;
+}
+
+.monthpicker ol.quarter li {
+    display: table-cell;
+    text-align: center; 
+    width: 33%;
+    border-width: 0;
+    border-style: solid;
+    border-color: white;
+    padding: 0.5em 0;
+}
+
+.monthpicker ol.quarter li a {
+    text-decoration: none;
+}
+
+.monthpicker ol.quarter li.now {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.monthpicker ol.quarter:first-child li:first-child {
+    border-width: 0 1px 1px 0;
+}
+
+.monthpicker ol.quarter:first-child li {
+    border-width: 0 1px 1px 1px;
+}
+
+.monthpicker ol.quarter:first-child li:last-child {
+    border-width: 0 0 1px 1px;
+}
+
+.monthpicker ol.quarter li:first-child {
+    border-width: 1px 1px 1px 0;
+}
+
+.monthpicker ol.quarter li {
+    border-width: 1px;
+}
+
+.monthpicker ol.quarter li:last-child {
+    border-width: 1px 0 1px 1px;
+}
+
+.monthpicker ol.quarter:last-child li:first-child {
+    border-width: 1px 1px 0 0;
+}
+
+.monthpicker ol.quarter:last-child li {
+    border-width: 1px 1px 0 1px;
+}
+
+.monthpicker ol.quarter:last-child li:last-child {
+    border-width: 1px 0 0 1px;
+}
+
+
+
+#cloud {
+    width: 14.5em;
+    height: 15em;
+}
+
+
+
+

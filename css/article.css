@@ -1,0 +1,180 @@
+body {
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+section#articles {
+    margin-top: 0.5em; 
+    font-family: 'Titillium Web', sans-serif;
+}
+
+section#articles > article {
+    margin: 0 auto 2em auto;
+    width: 67em;
+}
+
+@media screen and (max-width: 70em) {
+    section#articles > article {
+        margin-left: 1.7em;
+        margin-right: 1.7em;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 33em) {
+    section#articles > article {
+        margin-left: 0.75em;
+        margin-right: 0.75em;
+    }
+}
+
+@media screen and (max-width: 27em) {
+    section#articles > article {
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+}
+
+section#articles > article h1 {
+    position: relative;
+    padding: 0.4em 0.25em;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-bottom: solid 0.25em transparent;
+    text-transform: lowercase;
+}
+
+section#articles > article h1 {
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+section#articles > article > *:last-child {
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+section#articles > article h2, section#articles > article h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+section#articles > article h2 {
+    padding: 0.5em;
+}
+
+section#articles > article h3 {
+    padding: 0.5em 0.5em;
+    border-top: solid 0.5em transparent;
+}
+
+section#articles > article h3 > .comments {
+    padding: 0 0 0.5em 0;
+    line-height: 2.2em;
+    text-align: center; 
+}
+
+section#articles > article h3 > .share {
+    text-align: center; 
+}
+
+@media screen and (min-width: 31em) {
+    section#articles > article h3 > .comments {
+        float: left; 
+        padding: 0;
+    }
+
+    section#articles > article h3 > .share {
+        float: right;
+        text-align: right;
+    }
+
+    section#articles > article h3::after {
+        display: block;
+        clear: both;
+        content: ' ';
+        font-size: 0;
+    }
+
+    section#articles > article h3 > .sharebutton {
+        margin-left: 0.5em;
+    }
+}
+
+section#articles > article h4 {
+    padding: 0.25em 0.5em 0.5em 0.5em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+section#articles > article p {
+    padding: 0.5em 0.5em;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.sticky {
+    position: relative;
+    padding: 0.5em 0 0 0;
+}
+
+@media screen { 
+    section#articles > article h2 .tags, section#articles > article h2 .date {
+        text-align: center;
+    }
+           
+    section#articles > article h2 .tags::before {
+        content: '\f02b';
+        font-family: 'FontAwesome';
+        margin-right: 0.25em;
+    }
+    
+    section#articles > article h2 .date::before {
+        content: '\f073';
+        font-family: 'FontAwesome';
+        margin-right: 0.25em;
+    }
+    
+    section#articles > article h2 .tags .title, section#articles > article h2 .date .title {
+        position: relative;
+        font-size: 0;
+        top: 0;
+        left: -1000em;
+    }
+    
+    section#articles > article h3 > .comments::before {
+        content: '\f0e5';
+        font-family: 'FontAwesome';
+        margin-right: 0.25em;
+        color: #fff;
+    }
+    
+    section#articles > article h4::before, section#articles > article h4::after {
+        display: inline-block;
+        margin: 0 0.5em;
+        font-family: FontAwesome;
+        content: '\f01a';
+    }
+}
+
+
+@media screen and (min-width: 35em) {    
+    section#articles > article h2 .date {
+        float: left;
+    }
+
+    section#articles > article h2 .tags {
+        float: right;
+    }
+
+    section#articles > article h2:after {
+        display: block;
+        clear: both;
+        content: ' ';
+        font-size: 0;
+    }
+}

@@ -1,0 +1,60 @@
+body, .sticky {
+    background-color: #E0E0E0;
+}
+
+header {
+    background-color: #c0c0c0;
+    background-image: url(../images/banner.jpg);
+    border-color: rgba(111, 78, 55, 1.0);
+}
+
+#welcome .dot {
+    color: #777;
+}
+
+header section, header section.focus, section#articles article h1 {
+    background-color: rgba(111, 78, 55, 0.95);
+}
+
+@media screen and (max-width: 34em) {
+    header > section.panel.focus .content, body.noscript header > section.panel .content {
+        background-color: rgba(111, 78, 55, 0.95);
+    }
+}
+
+header, header section, header section.focus, header section.panel.focus .content,  header section input, section#articles article h2 {
+    color: #fff;
+}
+
+section#articles article h1 {
+    color: #fff;
+}
+
+header section a {
+    color: rgba(250, 210, 155, 1.0);
+}
+
+section#articles article h1, section#articles article h2, section#articles article h3 {
+    border-color: rgba(120, 115, 110, 1.0);
+}
+
+section#articles article h2 {
+    background-color: rgba(90, 70, 45, 1.0);
+}
+
+section#articles article h2 a, section#articles article h3 a {
+    color: rgba(250, 210, 155, 1.0);
+}
+
+section#articles article h3 {
+    background-color: rgba(111, 78, 55, 0.95);
+}
+
+section#articles article h4 {
+    background-color: #fff;
+}
+
+section#articles article p {
+    color: #000;
+    background-color: #fff;
+}
