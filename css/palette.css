@@ -1,60 +1,82 @@
-body, .sticky {
+body, header section.title {
     background-color: #E0E0E0;
 }
 
 header {
     background-color: #c0c0c0;
-    background-image: url(../images/banner.jpg);
+    background-image: url(../images/headerbw.jpg);
     border-color: rgba(111, 78, 55, 1.0);
 }
 
-#welcome .dot {
+header section, header section.focus, section#articles article h1, section.title h1, body.noscript header > section.panel, section#articles article h3 {
+    background-color: rgba(111, 78, 55, 0.95);
+    border-color: rgba(111, 78, 55, 0.95);
+}
+
+header #welcome .dot {
     color: #777;
 }
 
-header section, header section.focus, section#articles article h1 {
-    background-color: rgba(111, 78, 55, 0.95);
+header, header section, header section.focus, header section.panel.focus .content,  header section input, section#articles article h2, section.title h2, header > section#search input#terms, section#articles article h1, section.title h1, section#articles > article h3 > .comments::before {
+    color: #fff;
+}
+
+header > section.panel.focus {
+    border-color: rgba(250, 210, 155, 1.0);
+}
+
+header > section.focus h1, body.noscript header > section h1 {
+    border-color: #fff;
+}
+
+header > section#search input#terms.untouched {
+    color: #aaa;
+}
+
+header section a, section#articles article h2 a, section.title h2 a, section#articles article h3 a, section.title h3 a, header > section#search input#submit {
+    color: rgba(250, 210, 155, 1.0);
+}
+
+section#articles article h1, section.title h1, section#articles article h2, section#articles article h3, section#articles article h4, section#articles article h5 {
+    border-color: rgba(120, 115, 110, 1.0);
+}
+
+section#articles article h2, section.title h2 {
+    background-color: rgba(90, 70, 45, 1.0);
+}
+
+section#articles article h4, section#articles article p {
+    color: #000;
+    background-color: #fff;
+}
+
+section#articles article h5 {
+    color: #fff;
+    background-color: rgba(90, 70, 45, 1.0);
+}
+
+section#articles > article h5 p {
+    color: #fff;
+}
+
+@media screen and (min-width: 71em) and (min-height: 30em) {
+    header.expanded > section h1 {
+        border-color: #fff;
+    }
 }
 
 @media screen and (max-width: 34em) {
-    header > section.panel.focus .content, body.noscript header > section.panel .content {
+    header > section.panel.focus, body.noscript header > section.panel, header > section.panel.focus .content, body.noscript header > section.panel .content {
+        border-color: rgba(250, 210, 155, 1.0);
+        background-color: rgba(111, 78, 55, 0.95);
+    }
+    
+    body.noscript header > section.panel.focus, body.noscript header > section.panel .content {
+        border-color: rgba(111, 78, 55, 0.95);
         background-color: rgba(111, 78, 55, 0.95);
     }
 }
 
-header, header section, header section.focus, header section.panel.focus .content,  header section input, section#articles article h2 {
-    color: #fff;
-}
-
-section#articles article h1 {
-    color: #fff;
-}
-
-header section a {
-    color: rgba(250, 210, 155, 1.0);
-}
-
-section#articles article h1, section#articles article h2, section#articles article h3 {
-    border-color: rgba(120, 115, 110, 1.0);
-}
-
-section#articles article h2 {
-    background-color: rgba(90, 70, 45, 1.0);
-}
-
-section#articles article h2 a, section#articles article h3 a {
-    color: rgba(250, 210, 155, 1.0);
-}
-
-section#articles article h3 {
-    background-color: rgba(111, 78, 55, 0.95);
-}
-
-section#articles article h4 {
-    background-color: #fff;
-}
-
-section#articles article p {
-    color: #000;
-    background-color: #fff;
+.monthpicker ol.quarter li.now {
+    background-color: rgba(255, 255, 255, 0.2);
 }

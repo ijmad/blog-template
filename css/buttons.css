@@ -25,10 +25,11 @@
     content: "\f09a";
 }
 
-.facebookbutton:hover{
+.facebookbutton:hover {
     color: #4060A5  ! important;
     border-color: #4060A5 ! important;
     background: #fff ! important;
+    width: 5em;
 }
 
 .twitterbutton{

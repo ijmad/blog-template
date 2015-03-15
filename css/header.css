@@ -11,11 +11,15 @@ html, body {
 
 body {
     font-family: 'Titillium Web', sans-serif;
-    margin-top: 10.5em;
+    margin-top: 11em;
 }
 
 body.noscript {
     margin-top: 0;
+}
+
+body.article {
+    margin-top: 11em;
 }
 
 ul, ol, li {
@@ -123,18 +127,22 @@ header.collapsed > section.panel {
 
 header > section.panel.focus, body.noscript header > section.panel {
     width: 15em !important;
-    height: 17em !important;
     padding: 0.25em;
-    border: solid 0.25em rgba(250, 210, 155, 1.0);
+    border: solid 0.25em transparent;
+}
+
+header > section.panel.focus {
+    height: 17em !important;
 }
 
 body.noscript header > section.panel {
-    border-color: rgba(111, 78, 55, 0.95);
+    height: 17em !important;
 }
 
 header > section.panel.focus > .content, body.noscript header > section.panel > .content {
     display: block;
     width: 15em;
+    z-index: 100;
 }
 
 header > section h1, header > section input {
@@ -162,19 +170,16 @@ header > section h2 {
 }
 
 header > section#search input#terms {
-    color: #fff;
     width: 11.2em; 
 }
 
 header > section#search input#terms.untouched {
-    color: #aaa;
 }
 
 header > section#search input#submit {
     position: absolute; 
     top: 0.25em; 
     right: 0; 
-    color: rgb(250, 210, 155); 
     cursor: pointer;
 }
 
@@ -224,9 +229,16 @@ header > section.panel > .collapse:before, header > section.panel > .collapse:af
 }
 
 header > section.focus h1, body.noscript header > section h1 {
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px transparent;
 }
 
+section.title {
+    position: fixed;
+    width: 100%;
+    height: 6.5em;
+    overflow: hidden;
+    background-color: pink;
+}
 
 @media screen {
     header > section > a {
@@ -267,7 +279,11 @@ header > section.focus h1, body.noscript header > section h1 {
 
 @media screen and (min-width: 71em) and (min-height: 30em) {
     body {
-        margin-top: 27.0em;
+        margin-top: 27.5em;
+    }
+    
+    body.article {
+        margin-top: 11em;
     }
     
     body.noscript {
@@ -275,7 +291,7 @@ header > section.focus h1, body.noscript header > section h1 {
     }
     
     body.noscript header, body.noscript header.expanded {
-        height: 26.5em;
+        height: 26.15em;
     }
         
     header.expanded {
@@ -287,7 +303,7 @@ header > section.focus h1, body.noscript header > section h1 {
     }
     
     header.expanded > section.panel {
-        height: 17em;
+        height: 17em ! important;
         width: 15em;
     }
     
@@ -306,11 +322,13 @@ header > section.focus h1, body.noscript header > section h1 {
     }
     
     header.expanded > section h1 {
-        border-bottom: solid 1px white;
+        border-bottom: solid 1px transparent;
+    }
+    
+    header.expanded .closer {
+        display: none ! important;
     }
 }
-
-
 
 @media screen and (min-width: 75em) and (min-height: 40em) { 
     body {
@@ -321,8 +339,8 @@ header > section.focus h1, body.noscript header > section h1 {
         margin-top: 0;
     }
     
-    header.expanded , body.noscript header, body.noscript header.expanded {
-        height: 30.0em;
+    header.expanded, body.noscript header, body.noscript header.expanded {
+        height: 29.65em;
     }
     
     header.expanded > section#welcome {
@@ -330,10 +348,13 @@ header > section.focus h1, body.noscript header > section h1 {
     }
 }
 
-
 @media screen and (max-width: 70em) {
     body {
-        margin-top: 9.75em;
+        margin-top: 10.25em;
+    }
+    
+    body.article {
+        margin-top: 10.15em;
     }
     
     body.noscript {
@@ -345,7 +366,7 @@ header > section.focus h1, body.noscript header > section h1 {
     }
     
     body.noscript header {
-        height: 43.25em;
+        height: 42.9em;
     }
     
     header > section#welcome {
@@ -353,7 +374,7 @@ header > section.focus h1, body.noscript header > section h1 {
     }
     
     header > section.panel {
-        width: 2.5em !important;
+        width: 5em !important;
     }
     
     header > section.panel:before {
@@ -395,18 +416,25 @@ header > section.focus h1, body.noscript header > section h1 {
     }
 }
 
-
-
 @media screen and (min-width: 68em) {
     body.noscript header {
-        height: 24.75em;
+        height: 24.35em;
     }
 }
 
+@media screen and (max-width: 39em) {
+    header > section.panel {
+        width: 2.5em !important;
+    }
+}
 
 @media screen and (max-width: 34em) {
     body {
-        margin-top: 8.75em;
+        margin-top: 9.25em;
+    }
+    
+    body.article {
+        margin-top: 9.15em;
     }
     
     body.noscript {
@@ -418,7 +446,7 @@ header > section.focus h1, body.noscript header > section h1 {
     }
     
     body.noscript header {
-        height: 81.25em;
+        height: 80.75em;
     }
     
     header > section#welcome {
@@ -430,7 +458,7 @@ header > section.focus h1, body.noscript header > section h1 {
         height: 2.0em !important;
         margin: 0.5em;
         padding: 0.25em;
-        border: solid 0.25em rgba(250, 210, 155, 1.0);
+        border: solid 0.25em transparent;
     }
     
     body.noscript header > section.panel {
@@ -449,34 +477,31 @@ header > section.focus h1, body.noscript header > section h1 {
         display: none ! important;
     }
     
-    header > section.panel.focus .content, body.noscript header > section.panel .content {
+    header > section.panel .content, body.noscript header > section.panel .content {
         border-radius: 1em;
-        position: absolute;
-        top: 3.0em;
+        position: relative;
+        top: 0.25em;
         height: 17em;
         width: 15em;
         padding: 0.5em 1em;
-        border: solid 0.25em rgba(250, 210, 155, 1.0);
-    }
-    
-    body.noscript header > section.panel.focus, body.noscript header > section.panel .content {
-        border-color: rgba(111, 78, 55, 0.95);
+        border: solid 0.25em transparent;
+        visibility: hidden;
     }
 
-    header > section.panel.focus#date .content {
-        left: -0.25em;
+    header > section.panel#date .content {
+        left: -0.75em;
     }
     
-    header > section.panel.focus#search .content {
-        left: -4.75em;
+    header > section.panel#search .content {
+        left: -5.25em;
     }
     
-    header > section.panel.focus#popular .content {
-        left: -9.25em;
+    header > section.panel#popular .content {
+        left: -9.75em;
     }
     
-    header > section.panel.focus#info .content {
-        left: -13.75em;
+    header > section.panel#info .content {
+        left: -14.25em;
     }
     
     body.noscript header > section.panel#date .content {
@@ -516,9 +541,13 @@ header > section.focus h1, body.noscript header > section h1 {
 
 @media screen and (max-width: 27em) {
     body {
-        margin-top: 7.35em;
+        margin-top: 7.85em;
     }
-    
+
+    body.article {
+        margin-top: 7.75em;
+    }    
+
     body.noscript {
         margin-top: 0;
     }
@@ -528,7 +557,7 @@ header > section.focus h1, body.noscript header > section h1 {
     }
     
     body.noscript header {
-        height: 80em;
+        height: 79.65em;
     }
     
     header > section#welcome {
@@ -600,10 +629,6 @@ header > section.focus h1, body.noscript header > section h1 {
 
 .monthpicker ol.quarter li a {
     text-decoration: none;
-}
-
-.monthpicker ol.quarter li.now {
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .monthpicker ol.quarter:first-child li:first-child {
