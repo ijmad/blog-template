@@ -237,7 +237,6 @@ section.title {
     width: 100%;
     height: 6.5em;
     overflow: hidden;
-    background-color: pink;
 }
 
 @media screen {
@@ -485,7 +484,6 @@ section.title {
         width: 15em;
         padding: 0.5em 1em;
         border: solid 0.25em transparent;
-        visibility: hidden;
     }
 
     header > section.panel#date .content {
